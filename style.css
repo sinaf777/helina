@@ -122,6 +122,29 @@ body {
   color: #ffffff;
 }
 
+.btn.imo {
+  background: linear-gradient(135deg, #00b8e6, #007aff);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.btn.imo:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.btn.imo svg {
+  flex-shrink: 0;
+}
+
 .footer-text {
   color: #8891a7;
   font-size: 13px;
