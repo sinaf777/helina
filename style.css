@@ -1,5 +1,8 @@
-* {
-  box-sizing: border-box;
+* { box-sizing: border-box; }
+
+:root {
+  color-scheme: dark;
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
 }
 
 body {
@@ -8,153 +11,88 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: radial-gradient(circle at 50% 0%, #1a2332 0%, #0b0f1a 70%);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  padding: 20px;
+  padding: 24px;
+  background: radial-gradient(circle at top, #1a2332 0%, #0b0f1a 72%);
+  color: #f3f5fb;
 }
 
 .card {
   width: 100%;
-  max-width: 420px;
-  background: linear-gradient(180deg, #11182b 0%, #0c1120 100%);
+  max-width: 480px;
+  padding: 32px;
   border: 1px solid #2a3350;
-  border-radius: 24px;
-  padding: 32px 28px;
-  text-align: center;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  border-radius: 22px;
+  background: linear-gradient(180deg, #11182b 0%, #0c1120 100%);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.42);
 }
 
-.top-text {
-  color: #e6e9f2;
-  font-size: 17px;
-  font-weight: 600;
-  margin: 0 0 24px;
-}
+.form-header { text-align: center; margin-bottom: 28px; }
+.form-header h1 { margin: 0 0 10px; font-size: 27px; }
+.form-header p { margin: 0; color: #aeb8ce; font-size: 14px; line-height: 1.7; }
+.field { margin-bottom: 20px; text-align: left; }
 
-.profile {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 28px;
-}
-
-.avatar {
-  width: 110px;
-  height: 110px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #f6b73c;
-  box-shadow: 0 0 0 4px rgba(246, 183, 60, 0.15);
-  margin-bottom: 14px;
-  background: #1c2436;
-}
-
-.name {
-  color: #ffffff;
-  font-size: 22px;
-  font-weight: 700;
-  margin: 0 0 10px;
-}
-
-.badge {
-  background: #f6b73c;
-  color: #1a1a1a;
-  font-weight: 700;
-  font-size: 12px;
-  letter-spacing: 0.5px;
-  padding: 5px 14px;
-  border-radius: 999px;
-  margin-bottom: 12px;
-}
-
-.phone {
-  color: #f6b73c;
-  font-size: 20px;
-  font-weight: 700;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.buttons {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-  margin-bottom: 26px;
-}
-
-.btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 16px 10px;
-  border-radius: 14px;
-  text-decoration: none;
-  font-weight: 700;
+label {
+  display: block;
+  margin-bottom: 9px;
   font-size: 15px;
-  transition: transform 0.15s ease, filter 0.15s ease;
+  font-weight: 700;
+  line-height: 1.6;
+  color: #f3f5fb;
 }
 
-.btn:hover {
-  transform: translateY(-2px);
-  filter: brightness(1.08);
+label span { color: #f6c453; font-weight: 600; }
+
+input {
+  display: block;
+  width: 100%;
+  min-height: 48px;
+  padding: 13px 14px;
+  border: 1px solid #35415f;
+  border-radius: 11px;
+  outline: none;
+  background: #0a1020;
+  color: #f3f5fb;
+  font: inherit;
 }
 
-.btn.full {
-  grid-column: 1 / -1;
-}
+input::placeholder { color: #7f8ba5; font-size: 13px; }
+input:focus { border-color: #f6c453; box-shadow: 0 0 0 3px rgba(246, 196, 83, 0.14); }
 
-.btn.call {
-  background: linear-gradient(180deg, #ffd25c, #f6b73c);
-  color: #1a1a1a;
-}
-
-.btn.telegram {
-  background: #22314f;
-  color: #4fa6e8;
-  border: 1px solid #2f4066;
-}
-
-.btn.whatsapp {
-  background: #1f7a4d;
-  color: #ffffff;
-}
-
-.btn.imo {
-  background: linear-gradient(135deg, #00b8e6, #007aff);
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 12px 20px;
+button {
+  width: 100%;
+  min-height: 50px;
+  margin-top: 4px;
+  border: 0;
   border-radius: 12px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  background: linear-gradient(180deg, #ffd25c, #f6b73c);
+  color: #171717;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
 }
 
-.btn.imo:hover {
-  transform: translateY(-2px);
-  opacity: 0.9;
-}
+button:hover { filter: brightness(1.06); }
+button:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
 
-.btn.imo svg {
-  flex-shrink: 0;
-}
-
-.footer-text {
-  color: #8891a7;
+.form-message {
+  color: #f6c453;
   font-size: 13px;
-  margin: 0 0 14px;
-  line-height: 1.5;
+  line-height: 1.6;
+  text-align: center;
 }
 
-.restart {
-  color: #6b7490;
-  font-size: 13px;
-  margin: 0;
-  letter-spacing: 0.3px;
+.privacy-note {
+  margin: 16px 0 0;
+  color: #929db4;
+  font-size: 12px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.privacy-note span { color: #aeb8ce; }
+
+@media (max-width: 480px) {
+  body { padding: 14px; }
+  .card { padding: 24px 18px; }
+  .form-header h1 { font-size: 24px; }
 }
