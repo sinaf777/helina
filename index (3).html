@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="am">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>የምዝገባ ቅጽ | Registration Form</title>
+  <link rel="stylesheet" href="registration_style.css" />
+</head>
+<body>
+  <main class="card">
+    <header class="form-header">
+      <h1>የምዝገባ ቅጽ</h1>
+      <p>Registration Form · እባክዎ የሚከተሉትን መረጃዎች ይሙሉ።</p>
+    </header>
+
+    <form id="registrationForm">
+      <div class="field">
+        <label for="fullName">Full Name <span> / ሙሉ ስም</span></label>
+        <input id="fullName" name="fullName" type="text" autocomplete="name"
+               placeholder="Enter your full name / ሙሉ ስምዎን ያስገቡ" required />
+      </div>
+
+      <div class="field">
+        <label for="phone">Phone Number <span> / ስልክ ቁጥር</span></label>
+        <input id="phone" name="phone" type="tel" autocomplete="tel"
+               placeholder="Enter your phone number / ስልክ ቁጥርዎን ያስገቡ"
+               pattern="[+0-9 ()-]{7,20}" required />
+      </div>
+
+      <div class="field">
+        <label for="bankAccount">Bank Account Number <span> / የባንክ ሂሳብ ቁጥር</span></label>
+        <input id="bankAccount" name="bankAccount" type="text" inputmode="numeric"
+               autocomplete="off" placeholder="Enter your bank account number / የባንክ ሂሳብ ቁጥርዎን ያስገቡ"
+               pattern="[0-9 -]{6,30}" required />
+      </div>
+
+      <button type="submit">Register / ይመዝገቡ</button>
+      <p id="formMessage" class="form-message" role="status" aria-live="polite"></p>
+      <p class="privacy-note">
+        Your details are sensitive. Submit them only to an organization you trust.
+        <span> / መረጃዎችዎ ሚስጥራዊ ናቸው፤ የሚያምኑትን ድርጅት ብቻ ይስጡ።</span>
+      </p>
+    </form>
+  </main>
+
+  <script>
+    // Demo only: the form validates input but does not send or store personal details.
+    document.getElementById("registrationForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+      document.getElementById("formMessage").textContent =
+        "Demo only: no information was sent or saved. / ይህ ሙከራ ብቻ ነው፤ መረጃ አልተላከም ወይም አልተቀመጠም።";
+    });
+  </script>
+</body>
+</html>
